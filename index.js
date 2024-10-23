@@ -6,7 +6,6 @@ const {
 } = require("touchguild");
 
 const chalk = require("chalk");
-const _chalk = new chalk.Chalk();
 const config = require("./config/config.json");
 const client = new Client({
   token: config.TOKEN,
@@ -15,7 +14,7 @@ const client = new Client({
 
 client.on("ready", () => {
   console.log(
-    `${_chalk.bold.green(
+    `${chalk.bold.green(
       "√ Connection to Guilded established as " +
         client.user.username +
         " - " +
